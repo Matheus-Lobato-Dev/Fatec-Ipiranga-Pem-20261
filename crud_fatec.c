@@ -11,7 +11,7 @@ struct Produto {
 struct Produto produtos[MAX];
 int total = 0;
 
-// CREATE
+
 void cadastrar() {
     if (total >= MAX) {
         printf("Limite de produtos atingido!\n");
@@ -29,7 +29,7 @@ void cadastrar() {
     printf("Produto cadastrado com sucesso!\n");
 }
 
-// READ
+
 void listar() {
     if (total == 0) {
         printf("Nenhum produto cadastrado.\n");
@@ -42,7 +42,7 @@ void listar() {
     }
 }
 
-// UPDATE
+
 void atualizar() {
     int id;
     printf("Digite o ID do produto para atualizar: ");
@@ -60,7 +60,7 @@ void atualizar() {
     printf("Produto nao encontrado.\n");
 }
 
-// DELETE
+
 void excluir() {
     int id;
     printf("Digite o ID do produto para excluir: ");
