@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include "recursao.h"
+#include "interface.h"
+
+int main() {
+    int opcao, valor1, valor2;
+
+    do {
+        exibirMenu();
+        scanf("%d", &opcao);
+
+        switch(opcao) {
+            case 1:
+                printf("Digite o numero decimal: ");
+                scanf("%d", &valor1);
+                printf("Resultado em Binario: ");
+                decToBin(valor1);
+                printf("\n");
+                break;
+            case 2:
+                printf("Digite a base e o expoente: ");
+                scanf("%d %d", &valor1, &valor2);
+                printf("Resultado: %d\n", potencia(valor1, valor2));
+                break;
+            case 3:
+                printf("Digite o numero: ");
+                scanf("%d", &valor1);
+                printf("Soma dos digitos: %d\n", somaDigitos(valor1));
+                break;
+            case 4:
+                printf("Saindo...\n");
+                break;
+            default:
+                printf("Opcao invalida!\n");
+        }
+    } while(opcao != 4);
+
+    return 0;
+}
