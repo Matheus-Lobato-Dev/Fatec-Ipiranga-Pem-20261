@@ -1,15 +1,17 @@
 #include <stdio.h>
 
-void trocar(int *a, int *b) {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
-}
+struct Aluno {
+    char nome[50];
+    int matricula;
+    float media;
+};
 
 int main() {
-    int x = 5, y = 10;
-    printf("Antes: x = %d, y = %d\n", x, y);
-    trocar(&x, &y);
-    printf("Depois: x = %d, y = %d\n", x, y);
+    struct Aluno a = {"Joao", 123, 8.5};
+
+    printf("Endereco Nome: %p\n", (void*)&a.nome);
+    printf("Endereco Matricula: %p\n", (void*)&a.matricula);
+    printf("Endereco Media: %p\n", (void*)&a.media);
+
     return 0;
 }
